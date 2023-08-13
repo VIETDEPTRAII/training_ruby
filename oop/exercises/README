@@ -1,0 +1,26 @@
+1. Xây dựng hệ thống quán lý thư viện theo mô tả dưới đây (lưu ý: Xây dựng từng class ở mỗi file riêng biệt, tạo 1 file main để thực hiện các hành động ở các class kia)
+- Một thư viện cần quản lý các tài liệu bao gồm sách, tạp chí, báo. Mỗi tài liệu gồm có các thuộc tính sau: Mã tài liệu, tên nhà xuất bản, số bản phát hành và đơn giá.
+- Sách cần quản lý thêm các thuộc tính: Tên tác giả và số trang
+- Tạp chí cần quản lý thêm: Số phát hành và tháng phát hành
+- Báo cần quản lý thêm: Ngày phát hành
+    1. Hãy xây dựng các lớp để quản lý các loại tài liệu cho thư viện một cách hiệu quả (phải bao gồm hàm khởi tạo, getter / setter) → dùng tính chất inheritance
+    2. Hãy xây dựng phương thức tính tiền thuê tài liệu, mặc định tính tiền thuê tài liệu bằng đơn giá * số giờ mượn (số giờ mườn là tham số truyền vào phương thức) → dùng tính chất polymorphism
+        a. Tài liệu → tính tiền theo mặc định
+        b. Sách → tính tiền theo mặc định
+        c. Tạp chí → tính tiền theo mặc định + 10000
+        d. Báo → Số giờ mượn + 20000 (lưu ý: không nhân với đơn giá)
+    3. Hãy xây dụng phương thức in hết tất cả thông tin tương ứng với mỗi loại tài liệu (lưu ý: Thông tin được xuất ra theo mẫu như thế này Mã tài liệu: mã tài liệu, Tên nhà xuất bản: tên nhà xuất bản…) → dùng tính chất polymorphism
+    4. Khởi tạo một mảng các loại tài liệu ở file main trong đó bao gồm các objects: 1 tài liệu, 1 sách, 1 tạp chí, và 1 báo
+        a. Dùng vòng lặp in ra thông tin của từng loại (lưu ý: Thông tin của mỗi loại khi được in ra phải bắt đầu ở đầu dòng tiếp theo)
+        b. Tính tổng số tiền thuê tài liệu của tất cả tài liệu ở trong mảng trên rồi in ra
+
+
+
+2. Nối tiếp phần trên, hệ thống quản lý thư viện cần thêm tính năng quản lý người thuê
+- Người thuê tài liệu sẽ bao gồm thông tin: Tên, email, số điện thoại, và các loại tài liệu cần thuê
+    1. Hãy xây dựng class người thuê tài liệu với các thông tin trên (lưu ý: các loại tài liệu cần thuê sẽ nhận vào là 1 mảng các objects tài liệu như bài 1)
+    2. Hãy xây dựng phương thức để thêm tài liệu khác vào mảng tài liệu hiện tại của người thuê → xem về cách thêm 1 phần tử vào mảng của Ruby
+    3. Hãy xây dụng phương thức tính tổng tiền tất cả tài liệu của người thuê.
+    4. Hãy tạo ra 1 object người thuê tài liêu bên ngoài file main bao gồm: Tên, email, số điện thoại, và các loại tài liệu cần thuê (lưu ý: truyền mảng các loại tài liệu tương tự như ở bài 1)
+        a. Sau đó hãy gọi phương thức thêm mới tài liệu để thêm 1 tài liệu mới vào mảng tài liệu hiện tại cho người thuê
+        b. Sau đó hãy gọi phương thức tính tổng tiền tất cả tài liệu của người thuê rồi in ra
